@@ -8,14 +8,24 @@
       <h1>List of available seats</h1>
     </header>
 
-    <ul>
+    <!-- <ul>
       {{#each desks}}
         {{> desk}}
       {{/each}}
-    </ul>
+    </ul> -->
+
+    <table>
+    {{#each desks}}
+        {{> desk}}
+    {{/each}}
+    </table>
   </div>
 </body>
 
 <template name="desk">
-  <li>{{text}}</li>
+  <!-- <li>{{text}}</li> -->
+  <tr>
+      <td>{{text}}</td>
+      <td>{{isOccupied}}</td>
+  </tr>
 </template>
