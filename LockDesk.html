@@ -26,6 +26,12 @@
   <!-- <li>{{text}}</li> -->
   <tr>
       <td>{{text}}</td>
-      <td>{{isOccupied}}</td>
+      <td class="occupancy">
+            {{#if desks.isOccupied}}
+                occupied
+            {{else}}
+                vacant
+            {{/if}}
+      </td>
   </tr>
 </template>
