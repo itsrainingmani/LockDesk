@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container col-lg-6 col-lg-offset-3">
     <header>
       <h1>List of available seats</h1>
     </header>
@@ -22,8 +22,8 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Desk</th>
-                <th>Occupancy</th>
+                <th align="center">Desk</th>
+                <th align="center">Occupancy</th>
             </tr>
         </thead>
     {{#each desks}}
@@ -37,8 +37,8 @@
 <template name="desk">
   <!-- <li>{{text}}</li> -->
   <tr>
-      <td>{{text}}</td>
-      <td class="occupancy">
+      <td align="center">{{text}}</td>
+      <td class="occupancy" align="center">
             {{#if desks.isOccupied}}
                 occupied
             {{else}}
