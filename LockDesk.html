@@ -1,22 +1,22 @@
 <head>
-  <title>LockDesk</title>
+    <title>LockDesk</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div class="container col-lg-6 col-lg-offset-3">
-    <header>
-      <h1>List of available seats</h1>
-    </header>
+    <div class="container col-lg-6 col-lg-offset-3">
+        <header>
+            <h1>List of available seats</h1>
+        </header>
 
-    <!-- <ul>
-      {{#each desks}}
+        <!-- <ul>
+        {{#each desks}}
         {{> desk}}
-      {{/each}}
+        {{/each}}
     </ul> -->
 
     <table class="table table-striped">
@@ -26,24 +26,24 @@
                 <th align="center">Occupancy</th>
             </tr>
         </thead>
-    {{#each desks}}
+        {{#each desks}}
         {{> desk}}
-    {{/each}}
+        {{/each}}
     </table>
-  </div>
+</div>
 
 </body>
 
 <template name="desk">
-  <!-- <li>{{text}}</li> -->
-  <tr>
-      <td align="center">{{text}}</td>
-      <td class="occupancy" align="center">
+    <!-- <li>{{text}}</li> -->
+    <tr>
+        <td align="center">{{text}}</td>
+        <td class="occupancy" align="center">
             {{#if desks.isOccupied}}
-                occupied
+                <button class="btn btn-danger">occupied</button>
             {{else}}
-                vacant
+                <button class="btn btn-success">vacant</button>
             {{/if}}
-      </td>
-  </tr>
+        </td>
+    </tr>
 </template>
