@@ -1,8 +1,22 @@
 /* CSS declarations go here */
-* {
+body {
   text-align: center;
+  color: #fff;
+}
+
+body {
+  background-color: #0a7bed;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: auto auto;
 }
 
 .table th {
   text-align: center;
+}
+
+tr {
+  height: 50px;
+  padding: 2px;
 }
