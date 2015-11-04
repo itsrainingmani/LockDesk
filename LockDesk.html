@@ -19,11 +19,11 @@
         {{/each}}
     </ul> -->
 
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
-                <th align="center">Desk</th>
-                <th align="center">Occupancy</th>
+                <th>Desk</th>
+                <th>Occupancy</th>
             </tr>
         </thead>
         {{#each desks}}
@@ -37,12 +37,16 @@
 <template name="desk">
     <!-- <li>{{text}}</li> -->
     <tr>
-        <td align="center">{{text}}</td>
-        <td class="occupancy" align="center">
+        <td>{{text}}</td>
+        <td class="occupancy">
             {{#if desks.isOccupied}}
                 <button class="btn-danger">occupied</button>
             {{else}}
                 <button class="btn-success">open</button>
+
+                <button class="btn btn-danger" id="{{text}}">occupied</button>
+            {{else}}
+                <button class="btn btn-success" id="{{text}}">vacant</button>
             {{/if}}
         </td>
     </tr>
