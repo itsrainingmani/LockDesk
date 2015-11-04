@@ -6,6 +6,14 @@ if (Meteor.isClient) {
       return Desks.find({});
     }
   });
+
+  Template.desk.helpers({
+    "click .btn-success": function () {
+      Desks.update(this._id, {
+        $set: {isOccupied: !this.isOccupied}
+      })
+    }
+  });
 }
 
 if (Meteor.isServer) {
